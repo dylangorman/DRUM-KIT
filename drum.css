@@ -1,0 +1,305 @@
+body {
+    background-color: black;
+    font-family: 'Woodchuck-Heavy';
+    letter-spacing: .17em;
+    font-size: 20px;
+    line-height: 0px;
+    display: flex;  
+    flex-direction: column;
+}
+#rideCymbal {
+    cursor: pointer;
+}
+#tomDrum {
+    cursor: pointer;
+}
+#kd {
+    cursor: pointer;
+}
+#snareDrum {
+    cursor: pointer;
+}
+#hiHatCymbal {
+    cursor: pointer;
+}
+
+
+/* INSTRUCTION KEYS  */
+
+.drum p:hover{
+    color: white;
+    cursor: pointer;
+}
+.drum1{
+    flex-direction: column;
+    margin: 20px;  
+    color:#FF4242;
+}
+.drum2{
+    flex-direction: column;
+    margin: 20px; 
+    color: #FAFF00; 
+}
+.drum3{
+    flex-direction: column;
+    margin: 20px; 
+    color: #FF01FB; 
+}
+.drum4{
+    flex-direction: column;
+    margin: 20px;  
+    color: #02A9EA;
+}
+.drum5{
+    flex-direction: column;
+    margin: 20px;  
+    color: #3E8914;
+}
+.drum6{
+    flex-direction: column;
+    margin: 20px;  
+    color: #3E8914;
+}
+
+.instruction{
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width: 100%;
+    
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+
+/* DRUM LAYOUT  */
+.drumdiv{
+    margin: 10px;
+    position: relative;
+    width:100%;
+    height:1000px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    /* flex-direction: row; */
+}
+/* FLOOR TOM  */
+/* SHAPE */
+.tomBody{
+    position:relative;
+    transform: rotate(7deg);
+    height: 200px;
+    width: 170px;
+    right:20px;
+    border: 7px solid #FAFF00;
+    background-color: white;
+    border-radius: 3%;
+}
+/* FLOOR TOM ON CLICK  */
+#tomDrum .tomBody:active{
+    width: 170px;
+    height: 200px;
+    border-radius: 3%;
+    border:0px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #FAFF00, /* middle yellow */
+      0 0 140px 90px #FAFF00; /* outer yellow */
+}
+
+/* KICK DRUM */
+.kickDrum{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid #FF01FB;
+}
+/* KICK DRUM ON CLICK  */
+#kd .kickDrum:active{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border:0px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #FF01FB, /* middle magenta */
+      0 0 140px 90px #FF01FB; /* outer magenta */
+}
+
+/* SNARE DRUM  */
+.snareBody {
+    position:relative;
+    transform: rotate(-7deg);
+    height: 70px;
+    width: 150px;
+    bottom:70px;
+    border: 7px solid #02A9EA;
+    background-color: white;
+    border-radius: 3%;
+} 
+
+/* SNARE ON CLICK  */
+#snareDrum .snareBody:active{
+    width: 150px;
+    height: 70px;
+    border-radius: 3%;
+    border:0px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #02A9EA, /* middle cyan */
+      0 0 140px 90px #02A9EA; /* outer cyan */
+}
+/* HI HATS  */
+.hiHatTop {
+    position: relative;
+    transform: rotate(0deg);
+    height: 5px;
+    width: 120px;
+    bottom:150px;
+    border: 3px solid #3E8914;
+    background-color: white;
+    border-radius: 3%;
+}
+/* HI HAT TOP ON CLICK  */
+#hiHatCymbal .hiHatTop:active{
+    
+    width: 120px;
+    height: 5px;
+    z-index: 2;
+    border-radius: 3%;
+    border:0px;
+    bottom: 150px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #3E8914, /* middle green */
+      0 0 140px 90px #FAFF00;
+}
+.hiHatBottom {
+    position: relative;
+    transform: rotate(0deg);
+    height: 5px;
+    width: 120px;
+    bottom:145px;
+    border: 3px solid #3E8914;
+    background-color: white;
+    border-radius: 3%;  
+}
+/* HI HAT BOTTOM ON CLICK  */
+#hiHatCymbal .hiHatBottom:active{
+    
+    width: 120px;
+    height: 5px;
+    border-radius: 3%;
+    border:0px;
+    bottom: 145px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #3E8914, /* middle green */
+      0 0 140px 90px #FAFF00; /* outer yellow */
+}
+
+
+/* RIDE  */
+.ride {
+    position: relative;
+    transform: rotate(10deg);
+    height: 5px;
+    width: 220px;
+    left:100px;
+    bottom:170px;
+    border: 3px solid #FF4242;
+    background-color: white;
+    border-radius: 3%;  
+} 
+/* RIDE ON CLICK  */
+#rideCymbal .ride:active{
+    
+    width: 220px;
+    height: 5px;
+    /* border-radius: 3%; */
+    border:0px;
+    bottom: 170px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #FF4242, /* middle red */
+      0 0 140px 90px #FF4242; /* outer red */
+}
+
+
+/* MEDIA QUERIES  */
+@media only screen and (max-width: 1200px) {
+    .instruction {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    p {
+    flex-direction:column;
+    flex:50%;
+    margin:20px;
+    color: white; 
+    justify-content:space-evenly;
+     }
+
+
+.drumdiv {
+    position: relative;
+    top:100px;
+    -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);   
+}   
+}
+@media only screen and (max-width: 1000px){
+    .drumdiv{
+    position: relative;
+    -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);  
+}
+}
+@media  only screen and (max-width: 
+772px) {
+    .instruction{
+        font-size: 15px;
+        align-content: center;
+    }
+    .drumdiv{
+        position: relative;
+        -webkit-transform: scale(0.5);
+      -moz-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      transform: scale(0.5);  
+    }
+}
+@media only screen and (max-width: 550px){
+    .drumdiv{
+        position: relative;
+        -webkit-transform: scale(0.4);
+      -moz-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+      transform: scale(0.4);  
+    }
+}
+
+@media only screen and (max-width: 440px){.drumdiv{
+    position: relative;
+    -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);  
+}}
+
+
