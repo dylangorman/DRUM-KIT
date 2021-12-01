@@ -35,12 +35,15 @@ body {
     cursor: pointer;
     height: 100px;
 }
-#hiHatCymbal {
+#hiHatTop {
     cursor: pointer;
 }
 #closedHats1{
     cursor: pointer;
     height: 100px;
+}
+#hiHatBottom{
+    cursor: pointer;
 }
 #openHats1{
     cursor: pointer;
@@ -62,6 +65,7 @@ body {
       0 0 50px 30px #FF4242, /* middle red */
       0 0 70px 45px #FF4242; /* outer red */
 }
+
 .drum2{
     flex-direction: column;
     margin: 20px; 
@@ -74,6 +78,7 @@ body {
       0 0 50px 30px #FAFF00, /* middle red */
       0 0 70px 45px #FAFF00 /* outer red */
 }
+
 .drum3{
     flex-direction: column;
     margin: 20px; 
@@ -82,10 +87,13 @@ body {
 .drum3 :active{
     background-color: #fff;
     box-shadow:
-      0 0 60px 30px #fff,  /* inner white */
-      0 0 50px 30px #FF01FB, /* middle red */
-      0 0 70px 45px #FF01FB /* outer red */
+      0 0 60px 30px #fff,  
+      0 0 50px 30px #FF01FB, 
+      0 0 70px 45px #FF01FB
 }
+
+
+
 .drum4{
     flex-direction: column;
     margin: 20px;  
@@ -128,7 +136,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: row;
-    height: 300px;
+    height: 100px;
     width: 100%;
     
     justify-content: space-evenly;
@@ -139,7 +147,7 @@ body {
 /* DRUM LAYOUT  */
 .drumdiv{
     margin: 10px;
-    position: relative;
+    position:relative;
     width:100%;
     height:1000px;
     display: flex;
@@ -147,20 +155,61 @@ body {
     align-items:center;
     /* flex-direction: row; */
 }
+/* RIDE  */
+#rideCymbal {
+    position: relative;
+    bottom: 200px;
+    left:100px;
+    transform: rotate(10deg);
+    height: 5px;
+    width: 220px;
+    border: 3px solid #FF4242;
+    background-color: white;
+    border-radius: 3%;  
+} 
+/* RIDE ON CLICK  */
+#rideCymbal:active{
+    position: relative;
+    transform: rotate(10deg);
+    width: 220px;
+    height: 5px;
+    border-radius: 3%;
+    border:0px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #FF4242, /* middle red */
+      0 0 140px 90px #FF4242; /* outer red */
+}
+@keyframes ride{
+   0%, 100% {position: inherit;
+    transform: rotate(10deg);
+    width: 220px;
+    height: 5px;
+    border-radius: 3%;
+    border:0px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #FF4242, /* middle red */
+      0 0 140px 90px #FF4242; /* outer red */
+    }   
+}
 /* FLOOR TOM  */
 /* SHAPE */
-.tomBody{
+#tomDrum{
     position:relative;
-    transform: rotate(7deg);
+    transform: rotate(9deg);
+    bottom: 30px;
+    right:20px;
     height: 200px;
     width: 170px;
-    right:20px;
     border: 7px solid #FAFF00;
     background-color: white;
     border-radius: 3%;
 }
 /* FLOOR TOM ON CLICK  */
-#tomDrum .tomBody:active{
+#tomDrum:active{
     width: 170px;
     height: 200px;
     border-radius: 3%;
@@ -171,9 +220,21 @@ body {
       0 0 100px 60px #FAFF00, /* middle yellow */
       0 0 140px 90px #FAFF00; /* outer yellow */
 }
-
+@keyframes tomBody{
+    0%, 100%{
+    width: 170px;
+    height: 200px;
+    border-radius: 3%;
+    border:0px;
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #FAFF00, /* middle yellow */
+      0 0 140px 90px #FAFF00; /* outer yellow */
+    }   
+}
 /* KICK DRUM */
-.kickDrum{
+#kd{
     position: relative;
     height: 300px;
     width: 300px;
@@ -182,7 +243,8 @@ body {
     border: 10px solid #FF01FB;
 }
 /* KICK DRUM ON CLICK  */
-#kd .kickDrum:active{
+#kd:active{
+    position: relative;
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -193,21 +255,31 @@ body {
       0 0 100px 60px #FF01FB, /* middle magenta */
       0 0 140px 90px #FF01FB; /* outer magenta */
 }
-
+@keyframes kickDrum{
+    
+    0%, 100% {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    
+        background-color: #fff;
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #FF01FB, 0 0 140px 90px #FF01FB;
+    }
+}
 /* SNARE DRUM  */
-.snareBody {
+#snareDrum {
     position:relative;
+    bottom: 100px;
     transform: rotate(-7deg);
     height: 70px;
     width: 150px;
-    bottom:70px;
     border: 7px solid #02A9EA;
     background-color: white;
     border-radius: 3%;
 } 
-
 /* SNARE ON CLICK  */
-#snareDrum .snareBody:active{
+#snareDrum:active{
     width: 150px;
     height: 70px;
     border-radius: 3%;
@@ -218,84 +290,98 @@ body {
       0 0 100px 60px #02A9EA, /* middle cyan */
       0 0 140px 90px #02A9EA; /* outer cyan */
 }
+@keyframes snareBody{
+    0%, 100%{
+        
+        position: relative;
+        width: 150px;
+        height: 70px;
+        border-radius: 3%;
+        border:0px ;
+        background-color: #fff;
+        box-shadow:
+          0 0 60px 30px #fff,  /* inner white */
+          0 0 100px 60px #02A9EA, /* middle cyan */
+          0 0 140px 90px #02A9EA; /* outer cyan */
+    } 
+}
 /* HI HATS  */
-.hiHatTop {
+#hiHatTop {
     position: relative;
+    bottom: 200px;
+    right:40px;
+    flex-direction: column;
     transform: rotate(0deg);
     height: 5px;
     width: 120px;
-    bottom:150px;
     border: 3px solid #3E8914;
     background-color: white;
     border-radius: 3%;
 }
 /* HI HAT TOP ON CLICK  */
-#hiHatCymbal .hiHatTop:active{
-    
+#hiHatTop:active{
     width: 120px;
     height: 5px;
-    z-index: 2;
     border-radius: 3%;
     border:0px;
-    bottom: 150px;
     background-color: #fff;
     box-shadow:
       0 0 60px 30px #fff,  /* inner white */
       0 0 100px 60px #3E8914, /* middle green */
       0 0 140px 90px #FAFF00;
 }
-.hiHatBottom {
+@keyframes top{
+    0%, 100% {
     position: relative;
-    transform: rotate(0deg);
+    width: 120px;
+    height: 5px;
+    border-radius: 3%;
+    border:0px;
+    background-color: #fff;
+    box-shadow:
+      0px 0px 60px 30px #fff,  /* inner white */
+      0 0 100px 60px #3E8914, /* middle green */
+      0 0 140px 90px #FAFF00;  
+}
+}
+#hiHatBottom {
+    position: relative;
+    bottom: 170px;
+    right: 165px;
     height: 5px;
     width: 120px;
-    bottom:145px;
     border: 3px solid lime;
     background-color: white;
     border-radius: 3%;  
 }
 /* HI HAT BOTTOM ON CLICK  */
-#hiHatCymbal .hiHatBottom:active{
-    
+#hiHatBottom:active{
     width: 120px;
     height: 5px;
     border-radius: 3%;
     border:0px;
-    bottom: 145px;
     background-color: #fff;
     box-shadow:
       0 0 60px 30px #fff,  /* inner white */
       0 0 100px 60px lime, /* middle green */
       0 0 140px 90px #FAFF00; /* outer yellow */
 }
-
-
-/* RIDE  */
-.ride {
+@keyframes bottom{
+    0% {
     position: relative;
-    transform: rotate(10deg);
+    width: 120px;
     height: 5px;
-    width: 220px;
-    left:100px;
-    bottom:170px;
-    border: 3px solid #FF4242;
-    background-color: white;
-    border-radius: 3%;  
-} 
-/* RIDE ON CLICK  */
-#rideCymbal .ride:active{
-    
-    width: 220px;
-    height: 5px;
-    /* border-radius: 3%; */
+    border-radius: 3%;
     border:0px;
-    bottom: 170px;
     background-color: #fff;
     box-shadow:
       0 0 60px 30px #fff,  /* inner white */
-      0 0 100px 60px #FF4242, /* middle red */
-      0 0 140px 90px #FF4242; /* outer red */
+      0 0 100px 60px lime, /* middle green */
+      0 0 140px 90px #FAFF00; /* outer yellow */
+    
 }
+}
+
 
 
 /* MEDIA QUERIES  */
