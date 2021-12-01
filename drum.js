@@ -18,31 +18,49 @@ document.addEventListener('keypress', (keyValue) => {
 
     if (keyValue.keyCode == 51){
     kd.style.animation = "kickDrum" 
+    setTimeout(() => {
+        kd.style.removeProperty('animation')
+    }, 1000)
     kick.pause()
     kick.currentTime = 0
     kick.play();
 }else if (keyValue.keyCode == 50){
     tomDrum.style.animation = "tomBody"
+    setTimeout(() => {
+        tomDrum.style.removeProperty('animation')
+    }, 1000)
     floorTom.pause()
     floorTom.currentTime = 0
     floorTom.play();
 } else if (keyValue.keyCode == 52){
     snareDrum.style.animation = "snareBody"
+    setTimeout(() => {
+        snareDrum.style.removeProperty('animation')
+    }, 1000)
     snare.pause()
     snare.currentTime = 0
     snare.play();
 }  else if (keyValue.keyCode == 49){
     rideCymbal.style.animation = "ride"
+    setTimeout(() => {
+        rideCymbal.style.removeProperty('animation')
+    }, 1000)
     ride.pause()
     ride.currentTime = 0
     ride.play();
 }  else if (keyValue.keyCode == 53){
     hiHatCymbal.style.animation = "hiHatTop"
+    setTimeout(() => {
+        hiHatCymbal.style.removeProperty('animation')
+    }, 1000)
     closedHats.pause()
     closedHats.currentTime = 0
     closedHats.play();
 } else if (keyValue.keyCode == 54){
     hiHatCymbal.style.animation = "hiHatBottom"
+    setTimeout(() => {
+        hiHatCymbal.style.removeProperty('animation')
+    }, 1000)
     openHats.pause()
     openHats.currentTime = 0
     openHats.play();
