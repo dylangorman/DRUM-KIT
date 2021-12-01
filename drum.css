@@ -132,14 +132,13 @@ body {
 }
 
 .instruction{
-    position: absolute;
     text-align: center;
     display: flex;
     flex-direction: row;
     height: 100px;
     width: 100%;
-    
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding-top: 20px;
 }
 
@@ -147,9 +146,9 @@ body {
 /* DRUM LAYOUT  */
 .drumdiv{
     margin: 10px;
-    position:relative;
-    width:100%;
-    height:1000px;
+    position:absolute;
+    min-width:100%;
+    min-height:100%;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -182,7 +181,7 @@ body {
       0 0 140px 90px #FF4242; /* outer red */
 }
 @keyframes ride{
-   0%, 100% {position: inherit;
+   0%, 100% {position: relative;
     transform: rotate(10deg);
     width: 220px;
     height: 5px;
@@ -385,32 +384,90 @@ body {
 
 
 /* MEDIA QUERIES  */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
     .instruction {
+        display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        
+        justify-content: space-around;
+        margin: 10px 30px;
+    }
+    .instruction div{
+        flex:25%;
+        align-items: center;
+    }
+.drumdiv {
+    top:100px;
+    -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);   
+}   
+
+@media only screen and (max-width: 650px) {
+    .instruction {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        justify-content: space-around;
+        margin: 10px 10px;
+    }
+    .instruction div{
+        flex: 50%;
+        align-content: center;
+    }
+.drumdiv {
+    top:100px;
+    right:-270px;
+    -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);   
+}   
+@media only screen and (max-width: 450px) {
+    .instruction {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        justify-content: space-around;
+        margin: 10px 30px;
+    }
+    .instruction div{
+        flex:50%;
+        align-items: center;
+    }
+p{
+    font-size: 15px;
+    flex-direction: column;
+}
+.drumdiv {
+    position: fixed;
+    margin-right: -90px;
+    top:10px;
+    -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  -ms-transform: scale(0.4);
+  transform: scale(0.4);   
+}   
+
+/* @media only screen and (max-width: 1000px){
+    .instruction {
+
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
+    .instruction div{
+        flex:50%
+    } 
     p {
-    flex-direction:column;
-    flex:50%;
     margin:20px;
-    justify-content:space-evenly;
      }
-
-
-.drumdiv {
-    position: relative;
-    top:100px;
-    -webkit-transform: scale(0.85);
-  -moz-transform: scale(0.85);
-  -ms-transform: scale(0.85);
-  transform: scale(0.85);   
-}   
-}
-@media only screen and (max-width: 1000px){
     .drumdiv{
-    position: relative;
+    position: absolute;
     -webkit-transform: scale(0.7);
   -moz-transform: scale(0.7);
   -ms-transform: scale(0.7);
@@ -420,11 +477,20 @@ body {
 @media  only screen and (max-width: 
 772px) {
     .instruction{
-        font-size: 15px;
         align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .instruction div{
+        flex:50%
+    } 
+    p {
+    margin:20px;
+     }
     }
     .drumdiv{
-        position: relative;
+        position: absolute;
         -webkit-transform: scale(0.5);
       -moz-transform: scale(0.5);
       -ms-transform: scale(0.5);
@@ -433,7 +499,7 @@ body {
 }
 @media only screen and (max-width: 550px){
     .drumdiv{
-        position: relative;
+        position: absolute;
         -webkit-transform: scale(0.4);
       -moz-transform: scale(0.4);
       -ms-transform: scale(0.4);
@@ -441,12 +507,13 @@ body {
     }
 }
 
-@media only screen and (max-width: 440px){.drumdiv{
-    position: relative;
+@media only screen and (max-width: 440px){
+    .drumdiv{
+    position: absolute;
     -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
   -ms-transform: scale(0.3);
   transform: scale(0.3);  
-}}
+}} */
 
 
