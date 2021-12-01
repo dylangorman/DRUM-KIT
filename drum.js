@@ -18,8 +18,6 @@ document.addEventListener('keypress', (keyValue) => {
 
     if (keyValue.keyCode == 51){
     kd.style.animation = "kickDrum" 
-    setTimeout(() =>{
-    kd.style.removeProperty('animation')},100)
     kick.pause()
     kick.currentTime = 0
     kick.play();
