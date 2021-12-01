@@ -8,6 +8,8 @@ let floorTom = document.getElementById("floorTom");
 let ride = document.getElementById("ride");
 
 
+// ANIMATION 
+let kd = document.getElementById("kd");
 
 let count = 0
 
@@ -15,7 +17,9 @@ let count = 0
 document.addEventListener('keypress', (keyValue) => {
 
     if (keyValue.keyCode == 51){
-    kd.style.animation = "kickDrum"
+    kd.style.animation = "kickDrum" 
+    setTimeout(() =>{
+    kd.style.removeProperty('animation')},100)
     kick.pause()
     kick.currentTime = 0
     kick.play();
@@ -43,11 +47,10 @@ document.addEventListener('keypress', (keyValue) => {
     hiHatCymbal.style.animation = "hiHatBottom"
     openHats.pause()
     openHats.currentTime = 0
-    Hats.play();
+    openHats.play();
 }  
 
 })
-
 
 
 

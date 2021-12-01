@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    font-family: 'Woodchuck-Heavy';
+    font-family: 'nunito';
     letter-spacing: .17em;
     font-size: 20px;
     line-height: 0px;
@@ -10,55 +10,117 @@ body {
 #rideCymbal {
     cursor: pointer;
 }
+#ride1 {
+    cursor: pointer;
+    height: 100px;
+}
 #tomDrum {
     cursor: pointer;
+}
+#floor1 {
+    cursor: pointer;
+    height: 100px;
 }
 #kd {
     cursor: pointer;
 }
+#kick1{
+    cursor: pointer;
+    height: 100px;
+}
 #snareDrum {
     cursor: pointer;
+}
+#snare1{
+    cursor: pointer;
+    height: 100px;
 }
 #hiHatCymbal {
     cursor: pointer;
 }
-
+#closedHats1{
+    cursor: pointer;
+    height: 100px;
+}
+#openHats1{
+    cursor: pointer;
+    height: 100px;
+}
 
 /* INSTRUCTION KEYS  */
 
-.drum p:hover{
-    color: white;
-    cursor: pointer;
-}
+
 .drum1{
     flex-direction: column;
     margin: 20px;  
     color:#FF4242;
+}
+.drum1 :active{
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 50px 30px #FF4242, /* middle red */
+      0 0 70px 45px #FF4242; /* outer red */
 }
 .drum2{
     flex-direction: column;
     margin: 20px; 
     color: #FAFF00; 
 }
+.drum2 :active{
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 50px 30px #FAFF00, /* middle red */
+      0 0 70px 45px #FAFF00 /* outer red */
+}
 .drum3{
     flex-direction: column;
     margin: 20px; 
     color: #FF01FB; 
+}
+.drum3 :active{
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 50px 30px #FF01FB, /* middle red */
+      0 0 70px 45px #FF01FB /* outer red */
 }
 .drum4{
     flex-direction: column;
     margin: 20px;  
     color: #02A9EA;
 }
+.drum4 :active{
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 50px 30px #02A9EA, /* middle red */
+      0 0 70px 45px #02A9EA; /* outer red */
+}
 .drum5{
     flex-direction: column;
     margin: 20px;  
     color: #3E8914;
 }
+.drum5 :active{
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 50px 30px #3E8914, /* middle red */
+      0 0 70px 45px #3E8914; /* outer red */
+}
 .drum6{
     flex-direction: column;
     margin: 20px;  
-    color: #3E8914;
+    color: lime;
+}
+.drum6 :active{
+    background-color: #fff;
+    box-shadow:
+      0 0 60px 30px #fff,  /* inner white */
+      0 0 50px 30px lime, /* middle red */
+      0 0 70px 45px lime; /* outer red */
 }
 
 .instruction{
@@ -188,7 +250,7 @@ body {
     height: 5px;
     width: 120px;
     bottom:145px;
-    border: 3px solid #3E8914;
+    border: 3px solid lime;
     background-color: white;
     border-radius: 3%;  
 }
@@ -203,7 +265,7 @@ body {
     background-color: #fff;
     box-shadow:
       0 0 60px 30px #fff,  /* inner white */
-      0 0 100px 60px #3E8914, /* middle green */
+      0 0 100px 60px lime, /* middle green */
       0 0 140px 90px #FAFF00; /* outer yellow */
 }
 
@@ -247,7 +309,6 @@ body {
     flex-direction:column;
     flex:50%;
     margin:20px;
-    color: white; 
     justify-content:space-evenly;
      }
 
