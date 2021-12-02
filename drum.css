@@ -366,7 +366,7 @@ body {
       0 0 140px 90px #FAFF00; /* outer yellow */
 }
 @keyframes bottom{
-    0% {
+    0%, 100%{
     position: relative;
     width: 120px;
     height: 5px;
@@ -385,17 +385,16 @@ body {
 
 /* MEDIA QUERIES  */
 @media only screen and (max-width: 1000px) {
-    .instruction {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-        justify-content: space-around;
-        margin: 10px 30px;
-    }
+     /* .instruction { */
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
+        /* justify-content: space-around;
+        margin: 10px 10px;  */
+    } 
     .instruction div{
-        flex:25%;
-        align-items: center;
+        flex:25%; 
+
     }
 .drumdiv {
     top:100px;
@@ -404,6 +403,9 @@ body {
   -ms-transform: scale(0.8);
   transform: scale(0.8);   
 }   
+}
+
+
 
 @media only screen and (max-width: 650px) {
     .instruction {
@@ -426,7 +428,15 @@ body {
   -ms-transform: scale(0.5);
   transform: scale(0.5);   
 }   
-@media only screen and (max-width: 450px) {
+}
+
+
+@media only screen and (max-width: 720px) {
+    body{
+        display: flex;
+    flex-direction: column;
+    
+    }
     .instruction {
         display: flex;
         flex-direction: row;
@@ -444,76 +454,12 @@ p{
     flex-direction: column;
 }
 .drumdiv {
-    position: fixed;
-    margin-right: -90px;
-    top:10px;
-    -webkit-transform: scale(0.4);
-  -moz-transform: scale(0.4);
-  -ms-transform: scale(0.4);
-  transform: scale(0.4);   
+
+    top:150px;
+    left:-300px;
+    -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);   
 }   
-
-/* @media only screen and (max-width: 1000px){
-    .instruction {
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    .instruction div{
-        flex:50%
-    } 
-    p {
-    margin:20px;
-     }
-    .drumdiv{
-    position: absolute;
-    -webkit-transform: scale(0.7);
-  -moz-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  transform: scale(0.7);  
 }
-}
-@media  only screen and (max-width: 
-772px) {
-    .instruction{
-        align-content: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    .instruction div{
-        flex:50%
-    } 
-    p {
-    margin:20px;
-     }
-    }
-    .drumdiv{
-        position: absolute;
-        -webkit-transform: scale(0.5);
-      -moz-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-      transform: scale(0.5);  
-    }
-}
-@media only screen and (max-width: 550px){
-    .drumdiv{
-        position: absolute;
-        -webkit-transform: scale(0.4);
-      -moz-transform: scale(0.4);
-      -ms-transform: scale(0.4);
-      transform: scale(0.4);  
-    }
-}
-
-@media only screen and (max-width: 440px){
-    .drumdiv{
-    position: absolute;
-    -webkit-transform: scale(0.3);
-  -moz-transform: scale(0.3);
-  -ms-transform: scale(0.3);
-  transform: scale(0.3);  
-}} */
-
-
