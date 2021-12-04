@@ -5,7 +5,6 @@ let snare = document.getElementById("snare");
 let floorTom = document.getElementById("floorTom");
 let closedHats = document.getElementById("closedHats"); //top//
 let openHats = document.getElementById("openHats"); //bottom//
-
 let ride = document.getElementById("ride");
 
 
